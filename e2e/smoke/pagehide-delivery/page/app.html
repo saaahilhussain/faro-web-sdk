@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page-unload delivery</title>
+    <!-- Order matters: early.js registers listeners before Faro exists, app.js runs after it. -->
+    <script src="/pd/early.js"></script>
+    <script src="/bundles/faro-web-sdk.iife.js"></script>
+    <script src="/bundles/faro-web-tracing.iife.js"></script>
+    <script src="/pd/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Page-unload delivery</h1>
+      <p id="status">ready</p>
+      <button id="load" type="button">Load data</button>
+      <button id="details" type="button">Show details</button>
+      <button id="warn" type="button">Warn</button>
+      <button id="error" type="button">Throw</button>
+      <button id="next" type="button">Next page</button>
+    </main>
+  </body>
+</html>

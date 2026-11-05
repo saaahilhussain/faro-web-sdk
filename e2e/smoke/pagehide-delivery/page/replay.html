@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Replay payload sizes</title>
+    <!-- Same order as app.html, plus the replay bundle before app.js. -->
+    <script src="/pd/early.js"></script>
+    <script src="/bundles/faro-web-sdk.iife.js"></script>
+    <script src="/bundles/faro-web-tracing.iife.js"></script>
+    <script src="/bundles/faro-instrumentation-replay.iife.js"></script>
+    <script src="/pd/app.js"></script>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid #ccc;
+        padding: 2px 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Orders</h1>
+      <p id="status">ready</p>
+      <label>Search <input id="search" type="search" /></label>
+      <button id="shuffle" type="button">Reverse rows</button>
+      <button id="toggle" type="button">Details</button>
+      <button id="load" type="button">Load data</button>
+      <button id="next" type="button">Next page</button>
+      <section id="details-panel" hidden></section>
+      <table id="grid">
+        <thead>
+          <tr>
+            <th>Order</th>
+            <th>Customer</th>
+            <th>Status</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Updated</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+    <script src="/pd/replay-dom.js"></script>
+  </body>
+</html>
